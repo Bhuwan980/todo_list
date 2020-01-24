@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block detail %}
+<br>
+<center>
+<div class='container'>
+    <h3>
+        <ul style="list-style: none">
+          <li>{{ works.title }}</li>
+          <hr>
+          <li> <a href="{% url 'update' works.pk %}">Edit</a>|<a href="{% url 'delete' works.id %}">Delete</a></li>
+        </ul>
+       
+    </h3>
+</div>
+</center>
+{% endblock %}
+

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block search %}
+<h2>Your search result for '{{ search_term }}' is :</h2>
+<hr>
+{% for result in results %}
+<h2>
+<a href="{% url 'detail' result.pk %}">{{ result.title }}</a>
+<h2>
+{% endfor %}
+{% endblock %}
